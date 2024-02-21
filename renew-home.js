@@ -51,7 +51,7 @@ window.onload = function () {
 
         var firstAccordionIcon = firstAccordionContent.parentNode.querySelector('.faq_icon');
         if (firstAccordionIcon) {
-            firstAccordionIcon.style.transform = 'rotate(45deg)';
+            firstAccordionIcon.style.transform = 'rotate(180deg)';
         }
     }
 
