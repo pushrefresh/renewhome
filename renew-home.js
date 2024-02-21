@@ -1,7 +1,7 @@
-
 function toggleAccordion(card) {
     var content = card.querySelector('.faq_body');
     var icon = card.querySelector('.faq_icon');
+    var heading = card.querySelector('.faq_heading'); // Select the heading element.
 
     var isOpen = content.style.maxHeight !== '0px';
 
@@ -10,6 +10,7 @@ function toggleAccordion(card) {
     if (!isOpen) {
         content.style.maxHeight = content.scrollHeight + "px";
         icon.style.transform = 'rotate(180deg)';
+        heading.style.paddingBottom = '1.5rem'; // Adjust padding when the accordion is open.
     }
 }
 
@@ -18,8 +19,11 @@ function closeAllAccordions() {
     allCards.forEach(function (card) {
         var content = card.querySelector('.faq_body');
         var icon = card.querySelector('.faq_icon');
+        var heading = card.querySelector('.faq_heading'); // Select the heading element.
+
         content.style.maxHeight = '0px';
         icon.style.transform = 'rotate(0deg)';
+        heading.style.paddingBottom = '2rem'; // Reset padding when the accordion is closed.
     });
 }
 
